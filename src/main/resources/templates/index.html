@@ -1,1 +1,25 @@
 
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>DevOps CI/CD Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f4; }
+        .container { background: white; padding: 30px; border-radius: 10px; }
+        h1 { color: #333; }
+        .info { background: #e7f3ff; padding: 15px; border-radius: 5px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 th:text="${message}">Welcome Message</h1>
+        <div class="info">
+            <p><strong>Version:</strong> <span th:text="${version}">Version</span></p>
+            <p><strong>Status:</strong> Successfully deployed via CI/CD Pipeline</p>
+            <p><strong>Technologies Used:</strong> Git, Maven, Nexus, Jenkins, AWS EC2</p>
+        </div>
+        <p>This application demonstrates a complete DevOps CI/CD pipeline implementation.</p>
+        <a href="/health">Check Health Status</a>
+    </div>
+</body>
+</html>
